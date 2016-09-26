@@ -88,3 +88,9 @@ textarea {
     border-top: 1px solid #eaeaea;
     padding: 15px 0 15px 0;
 }
+
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
