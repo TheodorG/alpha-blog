@@ -12,9 +12,9 @@
         <li><%= link_to gravatar_for(user), user_path(user) %></li>
         
         <li class="article-title">
-        <%= if !user.admin? and !current_user.admin? 
+        <%= if logged_in? and !user.admin? and !current_user.admin? 
                 link_to user.username, user_path(user)
-            elsif user.admin? and current_user.admin?
+            elsif logged_in? and user.admin? and current_user.admin?
                 link_to(user.username, user_path(user), class: "text-danger") if current_user.admin?
             else
                 link_to user.username, user_path(user)
